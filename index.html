@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="_wrapper">
+    <div class="_container">
+      <header class="header">
+        <a href="" class="logo_link">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+          <h1>Блокнот <br> задач</h1>
+        </a>
+        <nav class="categories">
+          <h3>Категории</h3>
+          <ul class="categories-menu">
+            <li class="categories-item"><a href="#" class="categories-link">
+              Дом
+            </a></li>
+            <li class="categories-item"><a href="#" class="categories-link">
+              Работа
+            </a></li>
+            <li class="categories-item"><a href="#" class="categories-link">
+              Семья
+            </a></li>
+            <button class="add-categori_btn btn _modal-open" data-modal-open="add-categori">
+              <span>&#43;</span>Добавить
+            </button>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="main_header">
+          <button class="new-task_btn btn _modal-open" data-modal-open="add-task"><span>&#43;</span>Новая задача</button>
+          <div class="theme">
+            <a href="">&#10029;</a>
+          </div>
+          <div class="user">
+            <span class="user_hello">
+              Привет, username!
+            </span>
+            <img class="user_avatar" src="img/avatar.svg" alt="">
+            <a  href="" class="user_menu">&#11167;</a>
+          </div>
+        </div>
+        <div class="main_block">
+          <div class="tasks">
+            <div class="main_block__style tasks_count">
+              <h3>Успехи за последние 7 дней</h3>
+              <div class="tasks_count-list">
+                <div class="count_item">
+                  <span class="count_item-title">
+                    Создано
+                  </span>
+                  <div class="count_circle">
+                    <span class="count_num">100</span>
+                    задач
+                  </div>
+                </div>
+                <div class="count_item">
+                  <span class="count_item-title">
+                    Завершено
+                  </span>
+                  <div class="count_circle">
+                    <span class="count_num">90</span>
+                    задач
+                  </div>
+                </div>
+                <div class="count_item">
+                  <span class="count_item-title">
+                    Удалено
+                  </span>
+                  <div class="count_circle">
+                    <span class="count_num">6</span>
+                    задач
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tasks-list" class="main_block__style">
+              <div class="tasks-list tasks-list_active">
+                <h3>Активные задачи</h3>
+                <ul id="task-list_active">
+                </ul>
+              </div>
+              <div class="tasks-list tasks-list_end">
+                <h3>Завершенные задачи</h3>
+                <ul id="task-list_end">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <div class="main_block__style">
+              <h3>Сегодня</h3>
+              <div class="info_date__wrapper">
+                <div class="info_date">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#date"></use>
+                  </svg>
+                  <span id="info_date"></span>
+                </div>
+                <div class="info_time">
+                  <svg class="icon">
+                    <use xlink:href="img/sprite.svg#time"></use>
+                  </svg>
+                  <span id="info_time"></span>
+                </div>
+              </div>
+            </div>
+            <div class="main_block__style">
+              <h3>Интересный факт</h3>
+              <p class="info_fact">Человек, который просыпается в 6 утра, по статистике, закрывает все задачи к 18:00 вечера.
+                Попробуем также 🤔?</p>
+            </div>
+            <div class="main_block__style">
+              <h3>График решенных задач</h3>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <div class="modal" data-modal="add-task">
+    <div class="modal_overlay">
+      <div class="modal-body modal_new-task">
+        <h3>Новая задача</h3>
+        <button class="modal-close">&#9587;</button>
+        <div class="modal-body__flex">
+          <input id="new-task_input" class="modal_input" type="text">
+          <button id="new-task_btn" class="new-task_btn btn"><span>&#43;</span>Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="add-categori">
+    <div class="modal_overlay">
+      <div class="modal-body modal_new-categori">
+        <h3>Новая категория</h3>
+        <button class="modal-close">&#9587;</button>
+        <div class="modal-body__flex">
+          <input id="new-categori_input" class="modal_input" type="text">
+          <button id="new-categori_btn" class="new-categori_btn btn"><span>&#43;</span>Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" data-modal="update-task">
+    <div class="modal_overlay">
+      <div class="modal-body modal_update-task">
+        <h3>Новая задача</h3>
+        <button class="modal-close">&#9587;</button>
+        <div class="modal-body__flex">
+          <input id="update-task_input" class="modal_input" type="text">
+          <button id="update-task_btn" class="update-task_btn btn"><span>&#43;</span>Добавить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
