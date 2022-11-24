@@ -7,7 +7,7 @@ const toDo = {
   tasksList: document.getElementById('tasks-list'),
 };
 
-const serverUrl = 'https://todo-list-hellcat.herokuapp.com/'
+const serverUrl = 'http://178.57.220.116:4444/'
 
 const currentDateSpan = document.getElementById('info_date')
 const currentTimeSpan = document.getElementById('info_time')
